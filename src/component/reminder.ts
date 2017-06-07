@@ -3,7 +3,7 @@ export class Reminder{
   checked: boolean;
   constructor(name:string){
     this.name=name;
-    this.checked=false;
+    this.checked=true;
   }
 
 

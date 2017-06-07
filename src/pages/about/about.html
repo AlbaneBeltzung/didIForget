@@ -6,30 +6,49 @@
   </ion-navbar>
 </ion-header>
 
-  <ion-content>
-    <img class="hero" src="../assets/chill.jpg">
-    <section padding>
-      <h1>Please remind me of:</h1>
-      <ion-item>
-        <ion-label floating>Task</ion-label>
-        <ion-input type="text" [(ngModel)]="name"></ion-input>
-      </ion-item>
+<ion-content>
+  <img class="hero" src="../assets/chill.jpg">
+  <section padding>
+    <h1>Please remind me of:</h1>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-sm-12>
+          <ion-item>
+            <ion-label floating>Task</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
 
 
-        <button ion-button color="secondary" (click)="createNew()">Create New Reminder</button>
+          </ion-item>
 
-      <ion-col *ngFor="let i of items" col-sm-12>
-        <ion-item>
-          <ion-label>{{i.name}}</ion-label>
-          <ion-checkbox></ion-checkbox>
-        </ion-item>
+        </ion-col>
 
-      </ion-col>
+        <ion-col col-sm-4>
 
-      <button ion-button color="danger" (click)="checkOut()">I'm Out!</button>
-      <button ion-button color="danger" (click)="deleteAll()">Clear List</button>
+          <button ion-button color="secondary" (click)="createNew()"> <ion-icon name="add"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
 
-    </section>
+        <ion-col *ngFor="let i of items" col-sm-12>
+          <ion-card>
+            <ion-card-header>
+              <ion-item>
+                <ion-label>{{i.name}}</ion-label>
+                <ion-checkbox checked="{{i.checked}}"></ion-checkbox>
+              </ion-item>
+            </ion-card-header>
+
+          </ion-card>
+        </ion-col>
+        </ion-row>
+      <ion-row>
+        <button ion-button color="danger" (click)="checkOut()">I'm Out!</button>
+        <button ion-button color="danger" (click)="deleteAll()">Clear List</button>
+      </ion-row>
+    </ion-grid>
+
+  </section>
 
 
-  </ion-content>
+</ion-content>

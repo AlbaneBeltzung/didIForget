@@ -1,17 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Did i Forget?
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-sm-12>
+        <button class="bottombutton" ion-button color="danger" (click)="clearAll()">I'm Out!</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row *ngFor="let i of logs">
+      <ion-col col-sm-12>
+        <ion-card>
+          <ion-card-header>
+            <ion-item>
+              <ion-label>Checked out {{i.time}}</ion-label>
+
+            </ion-item>
+          </ion-card-header>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

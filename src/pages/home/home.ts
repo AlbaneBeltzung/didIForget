@@ -19,4 +19,7 @@ export class HomePage {
   openList(){
     this.navCtrl.push(AboutPage);
   }
+  openLogs(){
+    this.navCtrl.push(ContactPage);
+  }
 }

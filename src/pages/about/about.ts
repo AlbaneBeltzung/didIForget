@@ -26,7 +26,7 @@ export class AboutPage {
   }
   createNew(){
     console.log("pushing")
-    this.items.push(new Reminder(this.name));
+    this.items.unshift(new Reminder(this.name));
     localStorage.setItem('items', JSON.stringify(this.items));
     this.name="";
   }

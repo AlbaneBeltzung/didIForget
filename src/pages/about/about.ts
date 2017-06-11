@@ -41,7 +41,7 @@ export class AboutPage {
 
     if(temp){
       temp2= this.alertCtrl.create({
-        title: 'WAIT!!! Go Back you forgot something',
+        title: 'WAIT!!! Go back you forgot something',
         subTitle: 'Close everything and try again. I believe in you',
         buttons: ['OK']
       });

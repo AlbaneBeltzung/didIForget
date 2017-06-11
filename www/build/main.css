@@ -27455,6 +27455,43 @@ ion-navbar.toolbar {
   }
 }
 
+.card-ios {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.bottombutton {
+  width: 40vw;
+}
+
+.bottomcomands {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  background-color: grey;
+  left: 0px;
+  text-align: center;
+}
+
+ion-footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.addbutton .button-inner {
+  font-size: xx-large;
+}
+
+.button-clear-ios {
+  position: absolute;
+  bottom: 0px;
+}
+
 .container {
   margin: 10%;
 }
@@ -27465,4 +27502,8 @@ ion-navbar.toolbar {
 
 button {
   align: center;
+}
+
+.homesection {
+  text-align: center;
 }
